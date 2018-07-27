@@ -1,0 +1,18 @@
+{
+  "gui": {
+    "image_size": [140, 160],
+    "style_file": "res/style.qss",
+    "window": [1400, 900],
+    "fix_width": 1391,
+    "icon": "res/icon.png",
+    "search": "res/search.png",
+    "line_edit": [300, 800],
+    "margins": [0, 80, 0, 50],
+    "space": 10,
+    "start_numbers": 10
+  },
+  "core": {
+    "distance": "none",
+    "feature": "sift"
+  }
+}
