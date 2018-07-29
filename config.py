@@ -13,11 +13,11 @@ class cfg(object):
 
     @property
     def distance(self):
-        return self.js['core']['distance']
+        return self.js['data']['distance_metric']
 
     @property
-    def feature(self):
-        return self.js['core']['feature']
+    def features(self):
+        return self.js['data']['dataset_features']
 
     @property
     def image_size(self):
@@ -68,3 +68,27 @@ class cfg(object):
     @property
     def search(self):
         return self.js['gui']['search']
+
+    @property
+    def dataset(self):
+        return self.js['data']['dataset']
+
+    @property
+    def start_number(self):
+        return self.js['data']['start_numbers']
+
+    @property
+    def scale(self):
+        return self.js['gui']['dialog']['scale']
+
+    @property
+    def margin(self):
+        return self.js['gui']['dialog']['margin']
+
+    @property
+    def incre(self):
+        return self.js['gui']['incre']
+
+    @property
+    def top(self):
+        return self.js['rank']['top_numbers']

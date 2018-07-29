@@ -9,10 +9,20 @@
     "line_edit": [300, 800],
     "margins": [0, 80, 0, 50],
     "space": 10,
-    "start_numbers": 10
+    "start_numbers": 10,
+    "dialog": {
+      "scale": 0.5,
+      "margin": 500
+    },
+    "incre": 9
   },
-  "core": {
-    "distance": "none",
-    "feature": "sift"
+  "rank": {
+    "top_numbers": 100
+  },
+  "data": {
+    "dataset": "E:\\workplace\\Pytorch\\IRS\\data",
+    "start_numbers": 500,
+    "dataset_features": "E:\\workplace\\Pytorch\\IRS\\bow\\infos.pk",
+    "distance_metric": "cosine"
   }
 }
