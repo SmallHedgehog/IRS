@@ -10,6 +10,7 @@ from IRS.config import cfg
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    app.setWheelScrollLines(1)
 
     args = cfg()
 

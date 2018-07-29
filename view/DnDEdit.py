@@ -3,14 +3,14 @@ from PyQt5.QtGui import QDragEnterEvent, QDropEvent
 
 
 class DndEdit(QLineEdit):
-    pic_sufix = ('jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG',
+    pic_surfix = ('jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG',
             'bmp', 'BMP')
     def __init__(self):
         super(DndEdit, self).__init__()
         self.setAcceptDrops(True)
 
     def legal(self, text):
-        for surfix in DndEdit.pic_sufix:
+        for surfix in DndEdit.pic_surfix:
             if text.endswith(surfix):
                 return True
         return False
