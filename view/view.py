@@ -2,7 +2,7 @@ from .ImageItem import ImageItem
 from .DnDEdit import DndEdit
 from .IDetails import ImageDetails
 from IRS.calc.dataset import Dataset
-from IRS.calc.retrieval import Retrieval
+from IRS.calc.retrieval import Retrieval, ParisRetrieval
 
 from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QFileDialog
 from PyQt5.QtWidgets import QLineEdit, QListWidget, QListView
@@ -19,7 +19,7 @@ class _STATE(object):
     def __init__(self, args):
         super(_STATE, self).__init__()
         self.is_retrieval = False
-        self.retrieval = Retrieval(_args=args)
+        self.retrieval = ParisRetrieval(_args=args)
         self.index = 0
 
         self.rank_images = []
@@ -127,6 +127,8 @@ class IRSGUI(QWidget):
                 self.rarea.clear()
                 self.state.reset()
                 rank_images = self.state.retrieval.metric(self.IRetrieval)
+                if rank_images is None:
+                    return
                 self.state.rank_images = rank_images
                 self.rarea.addItem(self._create_icon(
                     self.IRetrieval
@@ -151,6 +153,8 @@ class IRSGUI(QWidget):
     def slot_detail_search(self):
         if hasattr(self, 'IRetrieval'):
             rank_images = self.state.retrieval.metric(self.IRetrieval)
+            if rank_images is None:
+                return
             self.rarea.clear()
             self.state.reset()
             self.state.rank_images = rank_images
