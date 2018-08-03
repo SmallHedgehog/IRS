@@ -20,6 +20,10 @@ class cfg(object):
         return self.js['data']['dataset_features']
 
     @property
+    def query_features(self):
+        return self.js['data']['query_features']
+
+    @property
     def image_size(self):
         return self.js['gui']['image_size']
 

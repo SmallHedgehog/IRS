@@ -20,9 +20,10 @@
     "top_numbers": 100
   },
   "data": {
-    "dataset": "E:\\workplace\\Pytorch\\IRS\\data",
+    "dataset": "F:\\Pairs\\data",
     "start_numbers": 500,
-    "dataset_features": "E:\\workplace\\Pytorch\\IRS\\bow\\infos.pk",
+    "dataset_features": "E:\\workplace\\Pytorch\\IRS\\feas\\crow\\norm_features\\infos.plk",
+    "query_features": "E:\\workplace\\Pytorch\\IRS\\feas\\crow\\query_norm_features\\infos.plk",
     "distance_metric": "cosine"
   }
 }
